@@ -1,0 +1,489 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mukta Mahee", sans-serif;
+}
+
+:root {
+  --blue1: #d7f8f6;
+  --blue2: #ace7ff;
+  --blue3: #72ccebf3;
+  --blue4: #7ed5f0;
+  --blue5: #295e97;
+
+  --pink1: #fccfe0;
+  --pink2: #ffb5e8;
+  --pink3: #db42c2;
+  --purple1: #ecd4ff;
+  --purple2: #d5aaff;
+  --purple3: #b28dff;
+  --purple4: #6a3497;
+  --white1: rgb(240, 248, 250);
+  --white2: rgba(233, 236, 236, 0.959);
+}
+
+/* header - nav */
+.nav {
+  position: relative;
+}
+
+.nav-container {
+  padding: 0 20px;
+  background: var(--pink1);
+  border-bottom: 3px solid var(--blue4);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.nav-container img {
+  width: 90px;
+  align-self: center;
+}
+
+.bar {
+  width: 26px;
+  height: 3px;
+  margin: 5px;
+  background: var(--blue4);
+}
+
+.btn {
+  padding: 3px 2px;
+  display: inline-block;
+  border: 2px solid var(--blue4);
+  align-self: center;
+  cursor: pointer;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 93px;
+  left: 0;
+  width: 100%;
+}
+
+.links-container {
+  /* height: 0; */
+  /* overflow: visible; */
+  transition: all 0.5s linear;
+}
+
+nav ul {
+  list-style-type: none;
+  display: none;
+}
+
+.links-container .show-list {
+  display: block;
+  /* position: relative; */
+  /* top: 93px; */
+}
+
+nav ul a {
+  display: block;
+  background: var(--blue1);
+  padding: 18px;
+  font-size: 17px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--blue5);
+  transition: all 0.5s ease;
+}
+
+nav ul a:hover {
+  background: var(--white1);
+  color: var(--pink3);
+  padding-left: 30px;
+}
+
+/* header - banner */
+header {
+  min-height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.2)
+    ),
+    url(./images/flower3.jpg) center/cover fixed no-repeat;
+  /* background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  flex: 0 0 auto;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
+.banner {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner img {
+  width: 300px;
+}
+
+.banner h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+  color: var(--white1);
+}
+
+.banner h3 {
+  text-transform: capitalize;
+  font-size: 25px;
+  color: var(--purple1);
+}
+
+.and {
+  color: var(--blue3);
+}
+
+.banner-icons {
+  padding: 20px;
+}
+
+.banner-icons a {
+  display: inline-block;
+  font-size: 30px;
+  padding: 5px 10px;
+  margin: 0 5px;
+  transition: all 0.5s ease;
+  color: var(--purple3);
+}
+
+.banner-icons a:hover {
+  color: var(--blue2);
+  transform: translateY(-10px);
+}
+
+@media screen and (min-width: 776px) {
+  .nav-container {
+    display: none;
+  }
+
+  .links-container {
+    display: none;
+  }
+
+  .links-container {
+    height: auto !important;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 103px;
+    background: var(--blue1);
+    border-bottom: 3px solid var(--pink1);
+  }
+
+  .nav-list a:hover {
+    background: var(--blue1);
+    padding-left: 20px;
+  }
+}
+
+/* services */
+.services {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+    url(./images/flower7.jpg) center/cover fixed no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.services .title h2 {
+  color: var(--blue3);
+  font-size: 36px;
+  /* letter-spacing: 1.5; */
+}
+
+.service {
+  color: var(--blue5);
+  display: flex;
+  align-items: center;
+  margin: 40px;
+}
+
+.service-icon {
+  font-size: 25px;
+  color: var(--blue3);
+  margin-right: 20px;
+  border-radius: 50%;
+  padding: 15px 20px;
+  border: 3px solid var(--blue3);
+}
+
+.service-text h3 {
+  text-transform: uppercase;
+  color: var(--pink2);
+}
+
+.service-text p {
+  line-height: 1.5;
+  margin-top: 5px;
+  color: var(--blue2);
+}
+
+@media screen and (min-width: 576px) {
+  .service-center {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 776px) {
+  .service-center {
+    width: 50%;
+  }
+  .service-text p {
+    width: 70%;
+  }
+}
+
+/* work section */
+.works {
+  padding: 0 0 100px 0;
+  background: #f5f3f5;
+}
+
+.title h2 {
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--blue5);
+}
+
+.title-underline {
+  background: var(--pink1);
+  width: 100px;
+  height: 4px;
+  margin: 10px auto;
+}
+
+.title {
+  padding: 50px 0;
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 auto;
+  width: 100%;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)); */
+  overflow: hidden;
+}
+
+.works-center img {
+  max-width: 100%;
+  display: block;
+  transition: all 1s ease;
+  padding: 10px;
+}
+
+.works-center img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 576px) {
+  .work {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .works-center img {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .works-center img {
+    width: 33.3333%;
+  }
+}
+
+/* about section */
+.about {
+  min-height: 100vh;
+  padding: 100px 0;
+  background: url(./images/flower4.jpg) center/cover fixed no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 50px 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-card h3 {
+  font-size: 40px;
+  text-transform: capitalize;
+  color: var(--blue5);
+}
+
+.about-card .fa-tree {
+  font-size: 45px;
+  margin: 20px 0;
+  color: var(--pink1);
+}
+
+.about-card p {
+  line-height: 1.8;
+}
+
+@media screen and (min-width: 776px) {
+  .about-card {
+    max-width: 60%;
+    border-radius: 30px;
+  }
+  .about-card p {
+    max-width: 80%;
+    margin: 0;
+  }
+}
+
+/* filler */
+.filler {
+  min-height: 60vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url(./images/flower13.jpg) center/cover fixed no-repeat;
+}
+
+/* contact */
+.contact {
+  min-height: 100vh;
+  background: url(./images/flower12.jpg) center/cover fixed no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-card {
+  flex: 0 0 80%;
+  padding: 40px 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  margin: 10px 0;
+}
+
+form h3 {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--pink3);
+  font-size: 26px;
+}
+
+form input,
+form textarea {
+  padding: 5px;
+  border: 3px solid var(--pink2);
+}
+
+input::placeholder,
+textarea::placeholder {
+  text-transform: capitalize;
+  color: var(--blue5);
+}
+
+.form-btn {
+  margin: 20px 10px;
+  font-size: 16px;
+  border-radius: 40px;
+  padding: 5px;
+  background: var(--pink2);
+  color: var(--pink3);
+  border: none;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+
+.form-btn:hover {
+  font-size: 18px;
+  color: var(--purple1);
+  background: var(--pink3);
+  border: 2px solid var(--purple1);
+}
+
+/* footer */
+footer {
+  background: var(--purple1);
+  padding: 60px 0;
+  text-align: center;
+  position: relative;
+}
+
+.footer-icons a {
+  display: inline-block;
+  font-size: 30px;
+  margin: 0 10px 20px 10px;
+  padding: 2px 5px;
+  transition: all 0.5s ease;
+  color: var(--purple3);
+}
+
+.footer-icons a:hover {
+  color: var(--blue2);
+  transform: translateY(-10px);
+}
+
+footer .top-link {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 30px;
+  border: solid 3px var(--blue2);
+  padding: 4px 15px;
+  border-radius: 50px;
+  color: var(--blue2);
+  display: none;
+}
+
+footer .show-list {
+  display: block;
+}
+
+footer footer p {
+  color: var(--blue5);
+  font-size: 20px;
+}
